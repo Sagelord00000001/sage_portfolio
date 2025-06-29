@@ -3,9 +3,18 @@
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import ProfileCard from "@/components/ui/ProfileCard";
+import { useRef } from "react";
+import { LampDemo } from "./components/Lamp";
 
 export default function Home() {
-  
+  const aboutRef = useRef(null)
+  const contactRef = useRef(null)
+
+  const scrollToSection = (ref) =>{
+    if (ref.current){
+      ref.current.scrollIntoView({behavior: "smooth"})
+    }
+  }
   return (
     <>
       <div className="pt-30 flex items-center justify-center flex-col">
@@ -29,7 +38,7 @@ export default function Home() {
           />
         </div>
 
-        <div>
+        <div className="h-full mt-3">
           <ProfileCard
             name="Okonkwo Chukwuebuka .E."
             handle="sagelord"
@@ -37,10 +46,21 @@ export default function Home() {
             contactText="Contact Me"
             showUserInfo={true}
             enableTilt={true}
-            onContactClick={() => console.log("Contact clicked")}
+            onContactClick={() => scrollToSection(contactRef)}
           />
         </div>
       </div>
+      {/* About Section */}
+      <section ref={aboutRef}>
+            <LampDemo />
+      </section>
+       {/* Contact Section */}
+             <section ref={contactRef} className="min-h-screen flex items-center justify-center bg-gray-800 text-white px-4">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
+          <p>Put your contact form or contact details here.</p>
+        </div>
+      </section>
     </>
   );
 }

@@ -1,8 +1,11 @@
 import React from 'react'
+import { LampDemo } from '../components/Lamp'
 
 function page() {
   return (
-    <div>about</div>
+    <div>
+      <LampDemo />
+    </div>
   )
 }
 

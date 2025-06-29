@@ -241,7 +241,7 @@ const ProfileCardComponent = ({
   return (
     <div
       ref={wrapRef}
-      className={`relative perspective-500 transform-gpu touch-none border border-white/10 shadow-[inset_0_0_10px_rgba(255,255,255,0.1)]  ${className}`.trim()}
+      className={`relative perspective-500 transform-gpu touch-none ${className}`.trim()}
       style={cardStyle}
     >
       {/* Card wrapper pseudo-element */}
@@ -249,11 +249,11 @@ const ProfileCardComponent = ({
 
       <section
         ref={cardRef}
-        className="h-[100vh] max-h-[700px] grid aspect-[0.718] rounded-[30px] relative bg-blend-[color-dodge,normal,normal,normal] shadow-[rgba(0,0,0,0.8)_calc((var(--pointer-from-left)_*_10px)_-_3px)_calc((var(--pointer-from-top)_*_20px)_-_6px)_20px_-5px] transition-transform duration-[1s] ease-[ease] transform-gpu bg-[length:100%_100%] bg-[position:0_0,0_0,50%_50%,0_0] bg-[image:radial-gradient(farthest-side_circle_at_var(--pointer-x)_var(--pointer-y),hsla(266,100%,90%,var(--card-opacity))_4%,hsla(266,50%,80%,calc(var(--card-opacity)*0.75))_10%,hsla(266,25%,70%,calc(var(--card-opacity)*0.5))_50%,hsla(266,0%,60%,0)_100%),radial-gradient(35%_52%_at_55%_20%,#00ffaac4_0%,#073aff00_100%),radial-gradient(100%_100%_at_50%_50%,#00c1ffff_1%,#073aff00_76%),conic-gradient(from_124deg_at_50%_50%,#c137ffff_0%,#07c6ffff_40%,#07c6ffff_60%,#c137ffff_100%)] overflow-hidden group-hover:transition-none group-hover:transform-gpu group-hover:rotate-x-[var(--rotate-y)] group-hover:rotate-y-[var(--rotate-x)] group-active:transition-none group-active:transform-gpu group-active:rotate-x-[var(--rotate-y)] group-active:rotate-y-[var(--rotate-x)]"
+        className="h-[100vh] w-sm md:w-full grid aspect-[0.718] rounded-[30px] relative bg-blend-[color-dodge,normal,normal,normal] shadow-[rgba(0,0,0,0.8)_calc((var(--pointer-from-left)_*_10px)_-_3px)_calc((var(--pointer-from-top)_*_20px)_-_6px)_20px_-5px] transition-transform duration-[1s] ease-[ease] transform-gpu bg-[length:100%_100%] bg-[position:0_0,0_0,50%_50%,0_0] bg-[image:radial-gradient(farthest-side_circle_at_var(--pointer-x)_var(--pointer-y),hsla(266,100%,90%,var(--card-opacity))_4%,hsla(266,50%,80%,calc(var(--card-opacity)*0.75))_10%,hsla(266,25%,70%,calc(var(--card-opacity)*0.5))_50%,hsla(266,0%,60%,0)_100%),radial-gradient(35%_52%_at_55%_20%,#00ffaac4_0%,#073aff00_100%),radial-gradient(100%_100%_at_50%_50%,#00c1ffff_1%,#073aff00_76%),conic-gradient(from_124deg_at_50%_50%,#c137ffff_0%,#07c6ffff_40%,#07c6ffff_60%,#c137ffff_100%)] overflow-hidden group-hover:transition-none group-hover:transform-gpu group-hover:rotate-x-[var(--rotate-y)] group-hover:rotate-y-[var(--rotate-x)] group-active:transition-none group-active:transform-gpu group-active:rotate-x-[var(--rotate-y)] group-active:rotate-y-[var(--rotate-x)]"
       >
         <div className="absolute inset-[1px] bg-[image:var(--inner-gradient)] bg-[rgba(0,0,0,0.9)] transform-gpu rounded-[30px]">
           <div
-            className="mask-[image:var(--icon)] mask-mode-[luminance] mask-repeat-[repeat] mask-size-[150%] mask-position-[top_calc(200%_-_(var(--background-y)_*_5))_left_calc(100%_-_var(--background-x))] transition-filter duration-[0.6s] ease-[ease] filter brightness-[0.66] contrast-[1.33] saturate-[0.33] opacity-[0.5] mix-blend-[color-dodge] overflow-hidden z-[3] transform-gpu rounded-[30px] bg-[position:0_var(--background-y),var(--background-x)_var(--background-y),center] bg-blend-[color,hard-light] bg-[size:500%_500%,300%_300%,200%_200%] bg-repeat-[repeat] group-hover:filter brightness-[0.85] contrast-[1.5] saturate-[0.5] group-active:filter brightness-[0.85] contrast-[1.5] saturate-[0.5]"
+            className="mask-[image:var(--icon)] mask-mode-[luminance] mask-repeat-[repeat] mask-size-[150%] mask-position-[top_calc(200%_-_(var(--background-y)_*_5))_left_calc(100%_-_var(--background-x))] transition-filter duration-[0.6s] ease-[ease] filter brightness-[0.66] contrast-[1.33] saturate-[0.33] opacity-[0.5] mix-blend-[color-dodge] overflow-hidden z-[3] transform-gpu rounded-[30px] bg-[position:0_var(--background-y),var(--background-x)_var(--background-y),center] bg-blend-[color,hard-light] bg-[size:500%_500%,300%_300%,200%_200%] bg-repeat-[repeat] group-hover:filter   group-active:filter "
             style={{
               backgroundImage:
                 "repeating-linear-gradient(0deg, var(--sunpillar-clr-1) calc(var(--space) * 1), var(--sunpillar-clr-2) calc(var(--space) * 2), var(--sunpillar-clr-3) calc(var(--space) * 3), var(--sunpillar-clr-4) calc(var(--space) * 4), var(--sunpillar-clr-5) calc(var(--space) * 5), var(--sunpillar-clr-6) calc(var(--space) * 6), var(--sunpillar-clr-1) calc(var(--space) * 7)), repeating-linear-gradient(var(--angle), #0e152e 0%, hsl(180, 10%, 60%) 3.8%, hsl(180, 29%, 66%) 4.5%, hsl(180, 10%, 60%) 5.2%, #0e152e 10%, #0e152e 12%), radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsla(0, 0%, 0%, 0.1) 12%, hsla(0, 0%, 0%, 0.15) 20%, hsla(0, 0%, 0%, 0.25) 120%)",
@@ -318,7 +318,7 @@ const ProfileCardComponent = ({
 
           <div className="max-h-full overflow-hidden text-center relative transform-gpu z-[5] mix-blend-[luminosity] translate-x-[calc(var(--pointer-from-left)_*_-6px_+_3px)] translate-y-[calc(var(--pointer-from-top)_*_-6px_+_3px)]">
             <div className="w-full absolute top-[3em] flex flex-col">
-              <h3 className="font-semibold m-0 text-[min(5svh,3em)] m-0 bg-[linear-gradient(to_bottom,#fff,#6f6fbe)] bg-[length:1em_1.5em] text-transparent bg-clip-text">
+              <h3 className="font-semibold text-[min(5svh,3em)] m-0 bg-[linear-gradient(to_bottom,#fff,#6f6fbe)] bg-[length:1em_1.5em] text-transparent bg-clip-text">
                 {name}
               </h3>
             </div>
