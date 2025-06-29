@@ -249,7 +249,7 @@ const ProfileCardComponent = ({
 
       <section
         ref={cardRef}
-        className="h-[100vh] w-sm md:w-full grid aspect-[0.718] rounded-[30px] relative bg-blend-[color-dodge,normal,normal,normal] shadow-[rgba(0,0,0,0.8)_calc((var(--pointer-from-left)_*_10px)_-_3px)_calc((var(--pointer-from-top)_*_20px)_-_6px)_20px_-5px] transition-transform duration-[1s] ease-[ease] transform-gpu bg-[length:100%_100%] bg-[position:0_0,0_0,50%_50%,0_0] bg-[image:radial-gradient(farthest-side_circle_at_var(--pointer-x)_var(--pointer-y),hsla(266,100%,90%,var(--card-opacity))_4%,hsla(266,50%,80%,calc(var(--card-opacity)*0.75))_10%,hsla(266,25%,70%,calc(var(--card-opacity)*0.5))_50%,hsla(266,0%,60%,0)_100%),radial-gradient(35%_52%_at_55%_20%,#00ffaac4_0%,#073aff00_100%),radial-gradient(100%_100%_at_50%_50%,#00c1ffff_1%,#073aff00_76%),conic-gradient(from_124deg_at_50%_50%,#c137ffff_0%,#07c6ffff_40%,#07c6ffff_60%,#c137ffff_100%)] overflow-hidden group-hover:transition-none group-hover:transform-gpu group-hover:rotate-x-[var(--rotate-y)] group-hover:rotate-y-[var(--rotate-x)] group-active:transition-none group-active:transform-gpu group-active:rotate-x-[var(--rotate-y)] group-active:rotate-y-[var(--rotate-x)]"
+        className="h-[100vh] grid aspect-[0.718] rounded-[30px] relative bg-blend-[color-dodge,normal,normal,normal] shadow-[rgba(0,0,0,0.8)_calc((var(--pointer-from-left)_*_10px)_-_3px)_calc((var(--pointer-from-top)_*_20px)_-_6px)_20px_-5px] transition-transform duration-[1s] ease-[ease] transform-gpu bg-[length:100%_100%] bg-[position:0_0,0_0,50%_50%,0_0] bg-[image:radial-gradient(farthest-side_circle_at_var(--pointer-x)_var(--pointer-y),hsla(266,100%,90%,var(--card-opacity))_4%,hsla(266,50%,80%,calc(var(--card-opacity)*0.75))_10%,hsla(266,25%,70%,calc(var(--card-opacity)*0.5))_50%,hsla(266,0%,60%,0)_100%),radial-gradient(35%_52%_at_55%_20%,#00ffaac4_0%,#073aff00_100%),radial-gradient(100%_100%_at_50%_50%,#00c1ffff_1%,#073aff00_76%),conic-gradient(from_124deg_at_50%_50%,#c137ffff_0%,#07c6ffff_40%,#07c6ffff_60%,#c137ffff_100%)] overflow-hidden group-hover:transition-none group-hover:transform-gpu group-hover:rotate-x-[var(--rotate-y)] group-hover:rotate-y-[var(--rotate-x)] group-active:transition-none group-active:transform-gpu group-active:rotate-x-[var(--rotate-y)] group-active:rotate-y-[var(--rotate-x)]"
       >
         <div className="absolute inset-[1px] bg-[image:var(--inner-gradient)] bg-[rgba(0,0,0,0.9)] transform-gpu rounded-[30px]">
           <div
@@ -279,7 +279,7 @@ const ProfileCardComponent = ({
             <div className="absolute inset-0 z-[1] backdrop-filter backdrop-blur-[30px] mask-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(0,0,0,0)_60%,rgba(0,0,0,1)_90%,rgba(0,0,0,1)_100%)] pointer-events-none"></div>
 
             {showUserInfo && (
-              <div className="absolute bottom-[20px] left-[20px] right-[20px] z-[2] flex items-center justify-between bg-[rgba(255,255,255,0.1)] backdrop-filter backdrop-blur-[30px] border border-[rgba(255,255,255,0.1)] rounded-[15px] p-[12px_14px] pointer-events-auto">
+              <div className="absolute bottom-[30px] left-[50px] right-[50px] z-[2] flex items-center justify-between bg-[rgba(255,255,255,0.1)] backdrop-filter backdrop-blur-[30px] border border-[rgba(255,255,255,0.1)] rounded-[15px] p-[12px_14px] pointer-events-auto">
                 <div className="flex items-center gap-[12px]">
                   <div className="w-[48px] h-[48px] rounded-full overflow-hidden border border-[rgba(255,255,255,0.1)] flex-shrink-0">
                     <img

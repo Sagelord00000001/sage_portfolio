@@ -7,7 +7,6 @@ import { useRef } from "react";
 import { LampDemo } from "./components/Lamp";
 
 export default function Home() {
-  const aboutRef = useRef(null)
   const contactRef = useRef(null)
 
   const scrollToSection = (ref) =>{
@@ -51,11 +50,11 @@ export default function Home() {
         </div>
       </div>
       {/* About Section */}
-      <section ref={aboutRef}>
+      <section id="#about">
             <LampDemo />
       </section>
        {/* Contact Section */}
-             <section ref={contactRef} className="min-h-screen flex items-center justify-center bg-gray-800 text-white px-4">
+             <section ref={contactRef} id="#" className="min-h-screen flex items-center justify-center bg-gray-800 text-white px-4">
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
           <p>Put your contact form or contact details here.</p>
