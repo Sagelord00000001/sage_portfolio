@@ -1,5 +1,6 @@
+import { LampDemo } from '@/components/ui/Lamp'
 import React from 'react'
-import { LampDemo } from './Lamp'
+
 
 function About() {
   return (
