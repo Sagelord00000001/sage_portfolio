@@ -1,114 +1,135 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
 
 export function LampDemo() {
   return (
     <LampContainer>
-      <motion.h1
+      <motion.div
         initial={{ opacity: 0.5, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.3,
-          duration: 0.8,
-          ease: "easeInOut",
-        }}
-        className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-3xl font-medium tracking-tight text-transparent sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+        transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
       >
-        Build lamps <br className="hidden sm:block" /> the right way
-      </motion.h1>
+        <Typography
+          component="h1"
+          align="center"
+          sx={{
+            background: "linear-gradient(to right, #38bdf8, #06b6d4)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            fontWeight: 800,
+            mt: 8,
+            mb: 4,
+            fontSize: {
+              xs: "2.25rem",
+              sm: "3rem",
+              md: "4rem",
+              lg: "5rem",
+              xl: "6rem",
+            },
+            lineHeight: 1.2,
+          }}
+        >
+          About Me
+        </Typography>
+      </motion.div>
+
+      <Typography
+        variant="body1"
+        sx={{
+          mt: 2,
+          px: { xs: 2, sm: 4 },
+          color: "#CBD5E1",
+          textAlign: "justify",
+          fontSize: {
+            xs: "1rem",
+            sm: "1.125rem",
+            md: "1.25rem",
+          },
+          lineHeight: 1.75,
+          maxWidth: "850px",
+        }}
+      >
+        I’m a passionate <strong>AI Engineer in training</strong>, a <strong>full-stack JavaScript and Next.js developer</strong>, a <strong>cybersecurity specialist</strong>, and an <strong>ethical hacker</strong> with expertise in Kali Linux. I build fast, scalable, and visually striking web applications using <strong>Next.js</strong>, <strong>Tailwind CSS</strong>, <strong>React</strong>.
+        <br /><br />
+        I also specialize in <strong>SEO</strong>, helping websites dominate search rankings through keyword strategy, technical optimization, content structuring, and performance tuning. My goal is always to get you ranking #1 on Google.
+        <br /><br />
+        As a dedicated <strong>tech enthusiast</strong>, I offer mentorship and hands-on training in <strong>web development, cybersecurity, AI fundamentals, and SEO</strong>. Whether you're a business aiming to grow your online presence, or a student eager to break into tech, I provide the tools and guidance you need to succeed.
+      </Typography>
     </LampContainer>
   );
 }
 
-export const LampContainer = ({
-  children,
-  className,
-}) => {
+export const LampContainer = ({ children, className }) => {
   return (
-    <div
-      className={cn(
-        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-950 w-full rounded-md z-0",
-        className
-      )}
+    <Box
+      className={className}
+      sx={{
+        position: "relative",
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        overflow: "hidden",
+        width: "100%",
+        // bgcolor: "#0f172a",
+        px: { xs: 2, sm: 4, md: 6 },
+      }}
     >
-      <div className="relative flex w-full pb-[20vh] sm:pb-0 flex-1 scale-y-125 items-center justify-center isolate z-0">
-        {/* Left gradient cone */}
-        <motion.div
-          initial={{ opacity: 0.5, width: "8rem" }}
-          whileInView={{ opacity: 1, width: "15rem" }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          style={{
-            backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
-          }}
-          className="absolute inset-auto right-1/2 h-40 sm:h-48 md:h-56 overflow-visible w-[15rem] sm:w-[20rem] md:w-[25rem] lg:w-[30rem] bg-gradient-conic from-cyan-500 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top]"
-        >
-          <div className="absolute w-full left-0 bg-slate-950 h-20 sm:h-28 md:h-32 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
-          <div className="absolute w-20 sm:w-28 md:w-32 h-full left-0 bg-slate-950 bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
-        </motion.div>
+      {/* Gradient Effects */}
+      <motion.div
+        initial={{ opacity: 0.5, width: "8rem" }}
+        whileInView={{ opacity: 1, width: "15rem" }}
+        transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
+        style={{
+          backgroundImage:
+            "conic-gradient(from 70deg at center top, #06b6d4, transparent 75%)",
+        }}
+        className="absolute right-1/2 h-80 w-70 sm:w-80 md:w-96 lg:w-[30rem] z-10"
+      ></motion.div>
 
-        {/* Right gradient cone */}
-        <motion.div
-          initial={{ opacity: 0.5, width: "8rem" }}
-          whileInView={{ opacity: 1, width: "15rem" }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          style={{
-            backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
-          }}
-          className="absolute inset-auto left-1/2 h-40 sm:h-48 md:h-56 w-[15rem] sm:w-[20rem] md:w-[25rem] lg:w-[30rem] bg-gradient-conic from-transparent via-transparent to-cyan-500 text-white [--conic-position:from_290deg_at_center_top]"
-        >
-          <div className="absolute w-20 sm:w-28 md:w-32 h-full right-0 bg-slate-950 bottom-0 z-20 [mask-image:linear-gradient(to_left,white,transparent)]" />
-          <div className="absolute w-full right-0 bg-slate-950 h-20 sm:h-28 md:h-32 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
-        </motion.div>
+      <motion.div
+        initial={{ opacity: 0.5, width: "8rem" }}
+        whileInView={{ opacity: 1, width: "15rem" }}
+        transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
+        style={{
+          backgroundImage:
+            "conic-gradient(from 290deg at center top, transparent, #06b6d4 75%)",
+        }}
+        className="absolute left-1/2 h-80 w-70 sm:w-80 md:w-96 lg:w-[30rem] z-10"
+      ></motion.div>
 
-        {/* Background effects */}
-        <div className="absolute top-1/2 h-32 sm:h-40 md:h-48 w-full translate-y-8 sm:translate-y-10 md:translate-y-12 scale-x-125 sm:scale-x-150 bg-slate-950 blur-xl sm:blur-2xl" />
-        <div className="absolute top-1/2 z-50 h-32 sm:h-40 md:h-48 w-full bg-transparent opacity-10 backdrop-blur-md" />
-        
-        {/* Central glow */}
-        <motion.div
-          initial={{ width: "6rem" }}
-          whileInView={{ width: "12rem" }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="absolute inset-auto z-30 h-24 sm:h-28 md:h-32 w-32 sm:w-40 md:w-48 -translate-y-[4rem] sm:-translate-y-[5rem] md:-translate-y-[6rem] rounded-full bg-cyan-400 blur-xl sm:blur-2xl"
-        />
-        
-        {/* Main central glow */}
-        <div className="absolute top-1/2 z-50 h-24 sm:h-32 md:h-36 w-[16rem] sm:w-[20rem] md:w-[24rem] lg:w-[28rem] -translate-y-1/2 rounded-full bg-cyan-500 opacity-30 sm:opacity-50 blur-xl sm:blur-2xl md:blur-3xl" />
-        
-        {/* Center line */}
-        <motion.div
-          initial={{ width: "8rem" }}
-          whileInView={{ width: "15rem" }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="absolute inset-auto z-50 h-0.5 w-[15rem] sm:w-[20rem] md:w-[25rem] lg:w-[30rem] -translate-y-[5rem] sm:-translate-y-[6rem] md:-translate-y-[7rem] bg-cyan-400"
-        />
+      {/* Central Glow */}
+      <motion.div
+        initial={{ width: "6rem" }}
+        whileInView={{ width: "12rem" }}
+        transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
+        className="absolute z-30 h-28 sm:h-32 md:h-36 bg-cyan-400 rounded-full blur-2xl"
+        style={{ top: "45%", left: "50%", transform: "translate(-50%, -50%)" }}
+      ></motion.div>
 
-        {/* Bottom cover */}
-        <div className="absolute inset-auto z-40 h-32 sm:h-36 md:h-44 w-full -translate-y-[8rem] sm:-translate-y-[10rem] md:-translate-y-[12.5rem] bg-slate-950" />
-      </div>
+      {/* Glow Ring */}
+      <Box
+        className="absolute z-20 rounded-full blur-3xl"
+        sx={{
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: { xs: "16rem", sm: "20rem", md: "24rem", lg: "28rem" },
+          height: { xs: "6rem", sm: "8rem", md: "9rem" },
+          bgcolor: "cyan.500",
+          opacity: { xs: 0.3, sm: 0.4, md: 0.5 },
+        }}
+      />
 
-      {/* Content container */}
-      <div className="relative z-50 flex -translate-y-110  md:-translate-y-80 flex-col items-center px-5">
+      {/* Content */}
+      <Container maxWidth="md" sx={{ position: "relative", zIndex: 50 }}>
         {children}
-      </div>
-    </div>
+      </Container>
+    </Box>
   );
 };

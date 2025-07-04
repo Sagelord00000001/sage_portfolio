@@ -4,7 +4,8 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import ProfileCard from "@/components/ui/ProfileCard";
 import { useRef } from "react";
-import { LampDemo } from "./components/Lamp";
+import { LampDemo } from "@/components/ui/Lamp";
+
 
 export default function Home() {
   const contactRef = useRef(null)
